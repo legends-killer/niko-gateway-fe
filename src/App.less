@@ -1,0 +1,52 @@
+.app {
+  box-sizing: border-box;
+  width: 100vw;
+  height: 95vh;
+  padding: 5px;
+  margin: 0px;
+  background-color: var(--color-neutral-1);
+  display: flex;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+  flex-direction: row;
+  flex-wrap: 'no-wrap';
+  min-height: 450px;
+}
+
+.nav {
+  flex: 0 0;
+  @media screen and (min-width: 768px) {
+    min-height: 450px;
+  }
+}
+
+.main {
+  flex: 1 1;
+  min-height: 450px;
+}
+
+.footer {
+  padding: 0px 15px;
+  height: calc(100vh - 95vh);
+  font-size: 0.85rem;
+  text-align: center;
+  text-justify: center;
+  background-color: var(--color-neutral-1);
+}
+
+.view {
+  width: 100vw;
+  height: 100vh;
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  background-color: var(--color-neutral-1);
+}
+
+.outter-card {
+  background-color: var(--color-bg-2);
+  border-radius: 10px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12);
+  border: 1px solid var(--color-bg-2);
+}

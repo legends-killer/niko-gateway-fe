@@ -1,0 +1,90 @@
+// global css
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+  color: var(--color-text-3);
+}
+
+// router transition
+.fade-enter {
+  -webkit-transform: translate(-100vw, 0px);
+  transform: translate(-100vw, 0px);
+}
+
+.fade-enter-active {
+  -webkit-transform: translate(0, 0px);
+  transform: translate(0, 0px);
+  transition: all 0.5s ease;
+}
+
+.fade-exit {
+  -webkit-transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
+}
+
+.fade-exit-active {
+  -webkit-transform: translate(100vw, 0px);
+  transform: translate(100vw, 0px);
+  transition: all 0.5s ease;
+}
+
+// drawer global style
+.drawer {
+  @media screen and (max-width: 768px) {
+    width: 100vw !important;
+  }
+  @media screen and (min-width: 768px) {
+    width: 50vw !important;
+    height: 90vh !important;
+    margin: 5vh auto;
+    border-radius: 10px 0 0 10px;
+  }
+}
+
+.drawer-btn-group {
+  @media screen and (max-width: 768px) {
+    > button {
+      margin: 0.3em auto;
+      width: 70%;
+      display: flex;
+      justify-content: center;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: right;
+    > button {
+      width: 20%;
+      margin: 0 0.2em;
+    }
+  }
+}
+
+.drawer-form {
+  label {
+    font-size: 0.75em !important;
+  }
+}
+
+// filter global style
+.input-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  .title {
+    margin-right: 10px;
+  }
+  .arco-input {
+    width: 150px;
+  }
+}

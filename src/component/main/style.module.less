@@ -1,0 +1,32 @@
+.main-wrapper {
+  color: var(--color-text-2);
+  margin: 1vh 0px;
+  margin-right: 10px;
+  position: relative;
+  overflow-x: hidden;
+  @media screen and (min-width: 768px) {
+    min-height: 450px;
+    height: 91.5vh;
+  }
+  @media screen and (max-width: 768px) {
+    margin-left: 10px;
+    height: calc(95vh - 10vh - 2vh - 1vh);
+  }
+  .safe-area {
+    margin: 10px;
+    @media screen and (min-width: 768px) {
+      width: calc(100vw - 200px - 50px - 10px);
+      height: calc(100vh - 2vh - 30px - 5vh);
+    }
+    @media screen and (max-width: 768px) {
+      width: calc(100vw - 10px - 20px - 20px);
+      height: calc(95vh - 2vh - 10vh - 1vh - 2vh);
+    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    overflow: auto;
+    position: absolute;
+  }
+}

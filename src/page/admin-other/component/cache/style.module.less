@@ -1,0 +1,25 @@
+.cache-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: end;
+  > div {
+    width: 50%;
+    overflow: hidden;
+  }
+}
+
+.card-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  .arco-card {
+    @media screen and (max-width: 768px) {
+      width: 100% !important;
+    }
+    @media screen and (min-width: 768px) {
+      width: calc(50% - 20px) !important;
+    }
+  }
+}
