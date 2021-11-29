@@ -2,12 +2,13 @@
  * @Author: legends-killer
  * @Date: 2021-11-24 00:56:35
  * @LastEditors: legends-killer
- * @LastEditTime: 2021-11-26 23:46:59
+ * @LastEditTime: 2021-11-30 00:17:39
  * @Description:
  */
 import xmlNative from './xmlNative'
 import { Message } from '@arco-design/web-react'
 import { server } from '@/prod.config.js'
+import * as lodash from 'lodash'
 
 interface IBaseRes<T> {
   data?: T
@@ -15,6 +16,15 @@ interface IBaseRes<T> {
   msg: string
   error: number | string
 }
+
+const showErr = lodash.throttle(
+  (err?: any) => {
+    if (!err) Message.error('网络错误')
+    else Message.error(err)
+  },
+  1000,
+  { leading: true, trailing: false }
+)
 
 const ajax = async (url: any, method: any, data: any) => {
   if (process.env.NODE_ENV !== 'production') url = 'http://127.0.0.1:7001' + url
@@ -26,15 +36,15 @@ const ajax = async (url: any, method: any, data: any) => {
   })
   // 服务器无响应
   if (!res) {
-    Message.error('网络错误')
+    showErr()
     return {}
   }
   // 有返回值
   const obj = JSON.parse(res || '{}')
 
   if (obj.error !== 0) {
-    if (obj.code === 42200) Message.error('参数错误')
-    else Message.error('' || obj.error || '未知错误')
+    if (obj.code === 42200) showErr('参数错误')
+    else showErr('' || obj.error || '未知错误')
   }
   return obj
 }
