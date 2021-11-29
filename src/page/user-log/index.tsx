@@ -2,7 +2,7 @@
  * @Author: legends-killer
  * @Date: 2021-11-12 14:38:12
  * @LastEditors: legends-killer
- * @LastEditTime: 2021-11-15 14:53:07
+ * @LastEditTime: 2021-11-29 17:11:20
  * @Description:
  */
 import { Table, Card, Tooltip } from '@arco-design/web-react'
@@ -26,7 +26,9 @@ export default function UserLog() {
       },
       {
         title: t('page.userLog.table.service'),
-        dataIndex: 'service',
+        render: (_: number, item: IAuthLog) => {
+          return item.service || 'Niko-Gateway'
+        },
       },
       {
         title: t('page.userLog.table.device'),

@@ -2,13 +2,13 @@
  * @Author: legends-killer
  * @Date: 2021-11-12 18:29:59
  * @LastEditors: legends-killer
- * @LastEditTime: 2021-11-23 15:03:50
+ * @LastEditTime: 2021-11-29 17:14:28
  * @Description:
  */
 import { useState, useEffect, useCallback } from 'react'
 import { IUserBizService } from './types'
 import { getUserBizService } from './api'
-import { Card, Spin } from '@arco-design/web-react'
+import { Card, Spin, Empty } from '@arco-design/web-react'
 import BizCard from './component/biz-card'
 import { useTranslation } from 'react-i18next'
 
@@ -41,9 +41,11 @@ export default function Service() {
             justifyContent: 'space-between',
           }}
         >
-          {biz.map((item) => (
-            <BizCard key={item.id} biz={item} />
-          ))}
+          {biz.length > 0 ? (
+            biz.map((item) => <BizCard key={item.id} biz={item} />)
+          ) : (
+            <Empty />
+          )}
         </Card>
       </Spin>
     </div>
