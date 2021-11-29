@@ -2,7 +2,7 @@
  * @Author: legends-killer
  * @Date: 2021-11-21 14:30:18
  * @LastEditors: legends-killer
- * @LastEditTime: 2021-11-23 14:57:50
+ * @LastEditTime: 2021-11-29 16:49:00
  * @Description:
  */
 export interface ICacheRefreshData {}
@@ -26,7 +26,7 @@ export interface ISystemInfo {
     biz: ICacheBaseInfo
     user: ICacheBaseInfo
   }
-  abTest: ICacheABTestInfo
+  proxyInfo: IProxyInfo
 }
 
 export interface ICacheBaseInfo {
@@ -35,10 +35,11 @@ export interface ICacheBaseInfo {
   syncAt: Date
   hitRate: number
 }
-export interface ICacheABTestInfo {
-  current: number
-  warn: number
-  error: number
-  fallback: number
-  success: number
+export interface IProxyInfo {
+  proxy: number
+  proxyWarn: number
+  proxyError: number
+  test: number
+  testWarn: number
+  testError: number
 }

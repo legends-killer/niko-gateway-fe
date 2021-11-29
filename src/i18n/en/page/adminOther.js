@@ -2,7 +2,7 @@
  * @Author: legends-killer
  * @Date: 2021-11-21 14:54:28
  * @LastEditors: legends-killer
- * @LastEditTime: 2021-11-22 20:39:25
+ * @LastEditTime: 2021-11-29 16:56:07
  * @Description:
  */
 
@@ -44,12 +44,14 @@ export const adminOther = {
       refresh: 'Refresh',
     },
     abTest: {
-      current: 'AB Test Total Req',
-      allError: 'AB Test Faild',
-      warn: 'AB Test Http Error',
-      error: 'AB Test Server Error',
-      success: 'AB Test Success',
-      fallback: 'Fallback Req',
+      current: 'AB Test Total',
+      warn: 'AB Test Biz Err',
+      error: 'AB Test Server Err',
+    },
+    proxy: {
+      current: 'Proxy Total',
+      warn: 'Proxy Biz Err',
+      error: 'Proxy Server Err',
     },
     sys: {
       time: 'System Started',

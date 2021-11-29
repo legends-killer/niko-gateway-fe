@@ -2,12 +2,12 @@
  * @Author: legends-killer
  * @Date: 2021-11-21 16:52:02
  * @LastEditors: legends-killer
- * @LastEditTime: 2021-11-25 19:44:45
+ * @LastEditTime: 2021-11-29 16:54:54
  * @Description:
  */
 
 import { ISystemInfo } from '../../types'
-import { Card, Statistic, Popover, Spin } from '@arco-design/web-react'
+import { Card, Statistic, Spin } from '@arco-design/web-react'
 import { useTranslation } from 'react-i18next'
 import moment from 'moment'
 import style from './style.module.less'
@@ -101,44 +101,48 @@ export default function Info(props: IProps) {
                 />
               </div>
             </Card>
-
+            <Card title={null} style={{ borderRadius: 10, margin: '10px 0px' }}>
+              <div className={style['item-card']}>
+                <Statistic
+                  title={t('page.adminOther.content.proxy.current')}
+                  value={sysInfo.proxyInfo.proxy}
+                  countUp
+                />
+                <div>
+                  <Statistic
+                    title={t('page.adminOther.content.proxy.warn')}
+                    value={sysInfo.proxyInfo.proxyWarn}
+                    countUp
+                    styleValue={{ color: '#FF7D00' }}
+                  />
+                </div>
+                <Statistic
+                  styleValue={{ color: '#F53F3F' }}
+                  title={t('page.adminOther.content.proxy.error')}
+                  value={sysInfo.proxyInfo.proxyError}
+                  countUp
+                />
+              </div>
+            </Card>
             <Card title={null} style={{ borderRadius: 10, margin: '10px 0px' }}>
               <div className={style['item-card']}>
                 <Statistic
                   title={t('page.adminOther.content.abTest.current')}
-                  value={sysInfo.abTest.current}
+                  value={sysInfo.proxyInfo.test}
                   countUp
                 />
-                <Popover
-                  trigger="hover"
-                  content={
-                    <div>
-                      <span>
-                        {t('page.adminOther.content.abTest.warn') +
-                          ': ' +
-                          sysInfo.abTest.warn}
-                      </span>
-                      <br />
-                      <span>
-                        {t('page.adminOther.content.abTest.error') +
-                          ': ' +
-                          sysInfo.abTest.error}
-                      </span>
-                    </div>
-                  }
-                >
-                  <div>
-                    <Statistic
-                      title={t('page.adminOther.content.abTest.allError')}
-                      value={sysInfo.abTest.warn + sysInfo.abTest.error}
-                      countUp
-                      styleValue={{ color: '#FF7D00' }}
-                    />
-                  </div>
-                </Popover>
+                <div>
+                  <Statistic
+                    title={t('page.adminOther.content.abTest.warn')}
+                    value={sysInfo.proxyInfo.testWarn}
+                    countUp
+                    styleValue={{ color: '#FF7D00' }}
+                  />
+                </div>
                 <Statistic
-                  title={t('page.adminOther.content.abTest.success')}
-                  value={sysInfo.abTest.success}
+                  styleValue={{ color: '#F53F3F' }}
+                  title={t('page.adminOther.content.abTest.error')}
+                  value={sysInfo.proxyInfo.testError}
                   countUp
                 />
               </div>

@@ -2,7 +2,7 @@
  * @Author: legends-killer
  * @Date: 2021-11-21 14:54:28
  * @LastEditors: legends-killer
- * @LastEditTime: 2021-11-22 20:38:57
+ * @LastEditTime: 2021-11-29 16:52:15
  * @Description:
  */
 
@@ -45,11 +45,13 @@ export const adminOther = {
     },
     abTest: {
       current: '灰度测试总数',
-      allError: '灰度测试失败',
       warn: '灰度业务错误',
       error: '灰度服务器错误',
-      success: '请求成功',
-      fallback: '回滚数量',
+    },
+    proxy: {
+      current: '请求转发总数',
+      warn: '请求转发错误',
+      error: '请求转发服务器错误',
     },
     sys: {
       time: '系统启动时间',
