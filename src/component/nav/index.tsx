@@ -2,7 +2,7 @@
  * @Author: legends-killer
  * @Date: 2021-11-09 22:37:04
  * @LastEditors: legends-killer
- * @LastEditTime: 2021-11-25 19:25:26
+ * @LastEditTime: 2021-11-30 22:42:03
  * @Description: Sidebar Nav
  */
 import style from './style.module.less'
@@ -31,7 +31,8 @@ const navMap: {
   '/admin/group': '2_3',
   '/admin/biz': '2_4',
   '/admin/log': '2_5',
-  '/admin/other': '2_6',
+  '/admin/system': '2_6',
+  '/admin/other': '2_7',
 }
 
 export default function Nav() {
@@ -121,8 +122,11 @@ export default function Nav() {
             <Link to="/admin/log">
               <MenuItem key="2_5">{t('nav.sysLog')}</MenuItem>
             </Link>
+            <Link to="/admin/system">
+              <MenuItem key="2_6">{t('nav.system')}</MenuItem>
+            </Link>
             <Link to="/admin/other">
-              <MenuItem key="2_6">{t('nav.other')}</MenuItem>
+              <MenuItem key="2_7">{t('nav.other')}</MenuItem>
             </Link>
           </SubMenu>
         )}

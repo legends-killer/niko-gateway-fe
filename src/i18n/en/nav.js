@@ -2,7 +2,7 @@
  * @Author: legends-killer
  * @Date: 2021-11-14 01:57:33
  * @LastEditors: legends-killer
- * @LastEditTime: 2021-11-19 16:29:57
+ * @LastEditTime: 2021-11-30 22:42:45
  * @Description:
  */
 export const nav = {
@@ -18,4 +18,5 @@ export const nav = {
   biz: 'Micro Service',
   other: 'Other',
   sysLog: 'System Log',
+  system: 'System Config',
 }

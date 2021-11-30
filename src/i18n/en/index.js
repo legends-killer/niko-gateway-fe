@@ -2,7 +2,7 @@
  * @Author: legends-killer
  * @Date: 2021-11-13 15:03:51
  * @LastEditors: legends-killer
- * @LastEditTime: 2021-11-23 16:12:31
+ * @LastEditTime: 2021-12-01 01:15:41
  * @Description:
  */
 import { info } from './page/info'
@@ -19,6 +19,7 @@ import { adminBiz } from './page/adminBiz'
 import { adminABTest } from './page/adminABTest'
 import { adminOther } from './page/adminOther'
 import { adminLog } from './page/adminLog'
+import { adminSystem } from './page/adminSystem'
 export const en = {
   nav,
   page: {
@@ -35,6 +36,7 @@ export const en = {
     adminABTest,
     adminOther,
     adminLog,
+    adminSystem,
   },
   common: {
     confirm: 'Confirm',
@@ -52,5 +54,7 @@ export const en = {
     new: 'New',
     paramsError: 'Params Error, Please check and try again',
     hr: 'Hour(s)',
+    min: 'Minute(s)',
+    sec: 'Second(s)',
   },
 }

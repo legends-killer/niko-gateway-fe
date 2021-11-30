@@ -2,7 +2,7 @@
  * @Author: legends-killer
  * @Date: 2021-11-09 23:16:22
  * @LastEditors: legends-killer
- * @LastEditTime: 2021-11-25 19:21:57
+ * @LastEditTime: 2021-11-30 22:44:16
  * @Description: Main Router View Component
  */
 import style from './style.module.less'
@@ -21,6 +21,7 @@ import AdminBiz from '@/page/admin-biz'
 import AdminABTest from '@/page/admin-abtest'
 import AdminOther from '@/page/admin-other'
 import AdminLog from '@/page/admin-log'
+import AdminSystem from '@/page/admin-system'
 
 export default function Main() {
   const location = useLocation()
@@ -59,6 +60,9 @@ export default function Main() {
               </Route>
               <Route exact path="/admin/abTest">
                 <AdminABTest />
+              </Route>
+              <Route exact path="/admin/system">
+                <AdminSystem />
               </Route>
               <Route exact path="/admin/other">
                 <AdminOther />

@@ -2,7 +2,7 @@
  * @Author: legends-killer
  * @Date: 2021-11-13 15:11:10
  * @LastEditors: legends-killer
- * @LastEditTime: 2021-11-23 16:12:23
+ * @LastEditTime: 2021-12-01 01:15:30
  * @Description:
  */
 import { info } from './page/info'
@@ -19,6 +19,7 @@ import { adminBiz } from './page/adminBiz'
 import { adminABTest } from './page/adminABTest'
 import { adminOther } from './page/adminOther'
 import { adminLog } from './page/adminLog'
+import { adminSystem } from './page/adminSystem'
 export const ch = {
   nav,
   page: {
@@ -35,6 +36,7 @@ export const ch = {
     adminABTest,
     adminOther,
     adminLog,
+    adminSystem,
   },
   common: {
     confirm: '确认',
@@ -52,5 +54,7 @@ export const ch = {
     new: '新增',
     paramsError: '请检查参数再试',
     hr: '小时',
+    min: '分钟',
+    sec: '秒',
   },
 }

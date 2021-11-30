@@ -2,7 +2,7 @@
  * @Author: legends-killer
  * @Date: 2021-11-14 01:57:37
  * @LastEditors: legends-killer
- * @LastEditTime: 2021-11-17 20:27:02
+ * @LastEditTime: 2021-11-30 22:42:38
  * @Description:
  */
 export const nav = {
@@ -18,4 +18,5 @@ export const nav = {
   biz: '微服务配置',
   other: '其他',
   sysLog: '系统日志',
+  system: '系统设置',
 }
