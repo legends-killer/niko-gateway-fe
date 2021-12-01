@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/niko-gateway-fe/static/css/main.0cfe82d7.chunk.css",
-    "main.js": "/niko-gateway-fe/static/js/main.1372f7ee.chunk.js",
+    "main.js": "/niko-gateway-fe/static/js/main.1b5fc41f.chunk.js",
     "runtime-main.js": "/niko-gateway-fe/static/js/runtime-main.68b7a6dd.js",
     "static/css/2.a7e3853a.chunk.css": "/niko-gateway-fe/static/css/2.a7e3853a.chunk.css",
     "static/js/2.b988a132.chunk.js": "/niko-gateway-fe/static/js/2.b988a132.chunk.js",
@@ -17,6 +17,6 @@
     "static/css/2.a7e3853a.chunk.css",
     "static/js/2.b988a132.chunk.js",
     "static/css/main.0cfe82d7.chunk.css",
-    "static/js/main.1372f7ee.chunk.js"
+    "static/js/main.1b5fc41f.chunk.js"
   ]
 }
