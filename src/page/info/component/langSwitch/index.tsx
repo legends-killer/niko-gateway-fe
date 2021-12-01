@@ -2,7 +2,7 @@
  * @Author: legends-killer
  * @Date: 2021-11-14 13:30:35
  * @LastEditors: legends-killer
- * @LastEditTime: 2021-11-25 19:39:00
+ * @LastEditTime: 2021-12-01 18:07:37
  * @Description:
  */
 import { IconLanguage } from '@arco-design/web-react/icon'
@@ -43,6 +43,7 @@ export default function LangSwitch() {
         </Menu.Item>
       </Menu>
     )
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [i18n, i18n.language])
   return (
     <div style={{ fontSize: '1.25rem', cursor: 'pointer' }}>
