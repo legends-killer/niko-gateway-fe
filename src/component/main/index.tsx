@@ -2,12 +2,12 @@
  * @Author: legends-killer
  * @Date: 2021-11-09 23:16:22
  * @LastEditors: legends-killer
- * @LastEditTime: 2021-11-30 22:44:16
+ * @LastEditTime: 2021-12-01 14:00:16
  * @Description: Main Router View Component
  */
 import style from './style.module.less'
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
-import { Route, Switch, useLocation } from 'react-router-dom'
+import { Redirect, Route, Switch, useLocation } from 'react-router-dom'
 import NotFound from '@/page/404'
 import Login from '@/page/login'
 import Auth from '@/page/auth'
@@ -69,6 +69,9 @@ export default function Main() {
               </Route>
               <Route exact path="/admin/log">
                 <AdminLog />
+              </Route>
+              <Route exact path="/">
+                <Redirect to="/info" />
               </Route>
               <Route path="*">
                 <NotFound />

@@ -2,7 +2,7 @@
  * @Author: legends-killer
  * @Date: 2021-11-24 00:56:35
  * @LastEditors: legends-killer
- * @LastEditTime: 2021-11-30 00:17:39
+ * @LastEditTime: 2021-12-01 15:02:19
  * @Description:
  */
 import xmlNative from './xmlNative'
@@ -26,6 +26,10 @@ const showErr = lodash.throttle(
   { leading: true, trailing: false }
 )
 
+const goToLogin = () => {
+  window.location.href = '/login'
+}
+
 const ajax = async (url: any, method: any, data: any) => {
   if (process.env.NODE_ENV !== 'production') url = 'http://127.0.0.1:7001' + url
   else url = server + url
@@ -43,6 +47,7 @@ const ajax = async (url: any, method: any, data: any) => {
   const obj = JSON.parse(res || '{}')
 
   if (obj.error !== 0) {
+    if (obj.code === 40104 || obj.code === 40101) goToLogin()
     if (obj.code === 42200) showErr('参数错误')
     else showErr('' || obj.error || '未知错误')
   }

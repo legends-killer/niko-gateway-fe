@@ -1,3 +1,10 @@
+/*
+ * @Author: legends-killer
+ * @Date: 2021-11-09 22:39:25
+ * @LastEditors: legends-killer
+ * @LastEditTime: 2021-12-01 14:16:34
+ * @Description:
+ */
 const xmlNative = (opt) => {
   opt = opt || {}
   opt.method = opt.method.toUpperCase() || 'POST'
@@ -18,7 +25,7 @@ const xmlNative = (opt) => {
       )
       xmlHttp.setRequestHeader(
         'Authorization',
-        window.localStorage.getItem('token')
+        sessionStorage.getItem('token') || localStorage.getItem('token')
       )
       xmlHttp.send(JSON.stringify(opt.data))
       xmlHttp.onreadystatechange = () => {
@@ -44,7 +51,7 @@ const xmlNative = (opt) => {
       )
       xmlHttp.setRequestHeader(
         'Authorization',
-        window.localStorage.getItem('token')
+        sessionStorage.getItem('token') || localStorage.getItem('token')
       )
       xmlHttp.send(null)
       xmlHttp.onreadystatechange = () => {
