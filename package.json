@@ -60,5 +60,6 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "style-resources-loader": "^1.4.1",
     "terser-webpack-plugin": "4.2.3"
-  }
+  },
+  "homepage": "https://legends-killer.github.io/niko-gateway-fe"
 }
