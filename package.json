@@ -30,7 +30,7 @@
   },
   "scripts": {
     "dev": "craco start",
-    "build": "GENERATE_SOURCEMAP=false craco build",
+    "build": "craco build",
     "test": "craco test",
     "eject": "react-scripts eject"
   },
@@ -58,6 +58,7 @@
     "@teamsupercell/typings-for-css-modules-loader": "^2.5.1",
     "craco-less": "^1.20.0",
     "eslint-plugin-react-hooks": "^4.2.0",
-    "style-resources-loader": "^1.4.1"
+    "style-resources-loader": "^1.4.1",
+    "terser-webpack-plugin": "4.2.3"
   }
 }

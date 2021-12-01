@@ -2,13 +2,14 @@
  * @Author: legends-killer
  * @Date: 2021-11-09 15:17:56
  * @LastEditors: legends-killer
- * @LastEditTime: 2021-11-25 19:08:52
+ * @LastEditTime: 2021-12-01 17:21:18
  * @Description:
  */
 const CracoLessPlugin = require('craco-less')
 const path = require('path')
 const resolve = (dir) => path.resolve(__dirname, dir)
 const isDev = process.env.NODE_ENV === 'development'
+const TerserPlugin = require('terser-webpack-plugin')
 
 const lessTsConfig = {
   overrideWebpackConfig: ({ webpackConfig }) => {
@@ -46,6 +47,22 @@ module.exports = {
     alias: {
       '@': resolve('src'),
     },
+    plugins: [
+      new TerserPlugin({
+        sourceMap: false,
+        parallel: true,
+        terserOptions: {
+          ecma: undefined,
+          parse: {},
+          compress: {
+            warnings: false,
+            drop_console: true,
+            drop_debugger: true,
+            pure_funcs: ['console.log'],
+          },
+        },
+      }),
+    ],
   },
 
   plugins: [

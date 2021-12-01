@@ -2,7 +2,7 @@
  * @Author: legends-killer
  * @Date: 2021-11-24 00:56:35
  * @LastEditors: legends-killer
- * @LastEditTime: 2021-12-01 15:02:19
+ * @LastEditTime: 2021-12-01 17:02:54
  * @Description:
  */
 import xmlNative from './xmlNative'
@@ -31,8 +31,7 @@ const goToLogin = () => {
 }
 
 const ajax = async (url: any, method: any, data: any) => {
-  if (process.env.NODE_ENV !== 'production') url = 'http://127.0.0.1:7001' + url
-  else url = server + url
+  url = server + url
   const res = await xmlNative({
     method,
     url,
