@@ -22,8 +22,5 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-#config
-prod.config.js
-
 #less module ts support
 *.module.less.d.ts
