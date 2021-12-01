@@ -2,7 +2,7 @@
  * @Author: legends-killer
  * @Date: 2021-11-09 22:37:04
  * @LastEditors: legends-killer
- * @LastEditTime: 2021-11-30 22:42:03
+ * @LastEditTime: 2021-12-01 18:56:11
  * @Description: Sidebar Nav
  */
 import style from './style.module.less'
@@ -16,6 +16,7 @@ import { Link, useLocation } from 'react-router-dom'
 import { useContext, useEffect, useState, useCallback } from 'react'
 import { isAdminContext } from '@/globalContext'
 import { useTranslation } from 'react-i18next'
+import { baseRouter } from '@/prod.config'
 
 const MenuItem = Menu.Item
 const SubMenu = Menu.SubMenu
@@ -73,7 +74,7 @@ export default function Nav() {
         defaultSelectedKeys={[selected]}
         selectedKeys={[selected]}
       >
-        <Link to="/info">
+        <Link to={baseRouter + '/info'}>
           <MenuItem key="0">
             <IconInfoCircle />
             {t('nav.info')}
@@ -88,10 +89,10 @@ export default function Nav() {
             </>
           }
         >
-          <Link to="/log">
+          <Link to={baseRouter + '/log'}>
             <MenuItem key="1_0">{t('nav.log')}</MenuItem>
           </Link>
-          <Link to="/service">
+          <Link to={baseRouter + '/service'}>
             <MenuItem key="1_1">{t('nav.service')}</MenuItem>
           </Link>
         </SubMenu>
@@ -104,28 +105,28 @@ export default function Nav() {
               </>
             }
           >
-            <Link to="/admin/api">
+            <Link to={baseRouter + '/admin/api'}>
               <MenuItem key="2_0">{t('nav.api')}</MenuItem>
             </Link>
-            <Link to="/admin/abTest">
+            <Link to={baseRouter + '/admin/abTest'}>
               <MenuItem key="2_1">{t('nav.abTest')}</MenuItem>
             </Link>
-            <Link to="/admin/user">
+            <Link to={baseRouter + '/admin/user'}>
               <MenuItem key="2_2">{t('nav.user')}</MenuItem>
             </Link>
-            <Link to="/admin/group">
+            <Link to={baseRouter + '/admin/group'}>
               <MenuItem key="2_3">{t('nav.group')}</MenuItem>
             </Link>
-            <Link to="/admin/biz">
+            <Link to={baseRouter + '/admin/biz'}>
               <MenuItem key="2_4">{t('nav.biz')}</MenuItem>
             </Link>
-            <Link to="/admin/log">
+            <Link to={baseRouter + '/admin/log'}>
               <MenuItem key="2_5">{t('nav.sysLog')}</MenuItem>
             </Link>
-            <Link to="/admin/system">
+            <Link to={baseRouter + '/admin/system'}>
               <MenuItem key="2_6">{t('nav.system')}</MenuItem>
             </Link>
-            <Link to="/admin/other">
+            <Link to={baseRouter + '/admin/other'}>
               <MenuItem key="2_7">{t('nav.other')}</MenuItem>
             </Link>
           </SubMenu>

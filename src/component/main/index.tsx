@@ -2,7 +2,7 @@
  * @Author: legends-killer
  * @Date: 2021-11-09 23:16:22
  * @LastEditors: legends-killer
- * @LastEditTime: 2021-12-01 14:00:16
+ * @LastEditTime: 2021-12-01 18:52:23
  * @Description: Main Router View Component
  */
 import style from './style.module.less'
@@ -22,6 +22,7 @@ import AdminABTest from '@/page/admin-abtest'
 import AdminOther from '@/page/admin-other'
 import AdminLog from '@/page/admin-log'
 import AdminSystem from '@/page/admin-system'
+import { baseRouter } from '@/prod.config'
 
 export default function Main() {
   const location = useLocation()
@@ -31,47 +32,47 @@ export default function Main() {
         <CSSTransition key={location.pathname} classNames="fade" timeout={800}>
           <div className={style['safe-area']}>
             <Switch location={location}>
-              <Route exact path="/login">
+              <Route exact path={baseRouter + '/login'}>
                 <Login />
               </Route>
-              <Route exact path="/auth">
+              <Route exact path={baseRouter + '/auth'}>
                 <Auth />
               </Route>
-              <Route exact path="/info">
+              <Route exact path={baseRouter + '/info'}>
                 <Info />
               </Route>
-              <Route exact path="/log">
+              <Route exact path={baseRouter + '/log'}>
                 <UserLog />
               </Route>
-              <Route exact path="/service">
+              <Route exact path={baseRouter + '/service'}>
                 <Service />
               </Route>
-              <Route exact path="/admin/user">
+              <Route exact path={baseRouter + '/admin/user'}>
                 <AdminUser />
               </Route>
-              <Route exact path="/admin/api">
+              <Route exact path={baseRouter + '/admin/api'}>
                 <AdminApi />
               </Route>
-              <Route exact path="/admin/group">
+              <Route exact path={baseRouter + '/admin/group'}>
                 <AdminGroup />
               </Route>
-              <Route exact path="/admin/biz">
+              <Route exact path={baseRouter + '/admin/biz'}>
                 <AdminBiz />
               </Route>
-              <Route exact path="/admin/abTest">
+              <Route exact path={baseRouter + '/admin/abTest'}>
                 <AdminABTest />
               </Route>
-              <Route exact path="/admin/system">
+              <Route exact path={baseRouter + '/admin/system'}>
                 <AdminSystem />
               </Route>
-              <Route exact path="/admin/other">
+              <Route exact path={baseRouter + '/admin/other'}>
                 <AdminOther />
               </Route>
-              <Route exact path="/admin/log">
+              <Route exact path={baseRouter + '/admin/log'}>
                 <AdminLog />
               </Route>
-              <Route exact path="/">
-                <Redirect to="/info" />
+              <Route exact path={baseRouter + '/'}>
+                <Redirect to={baseRouter + '/info'} />
               </Route>
               <Route path="*">
                 <NotFound />
