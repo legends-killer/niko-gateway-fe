@@ -2,7 +2,7 @@
  * @Author: legends-killer
  * @Date: 2021-11-15 22:09:19
  * @LastEditors: legends-killer
- * @LastEditTime: 2021-11-25 02:31:47
+ * @LastEditTime: 2021-12-02 16:53:40
  * @Description:
  */
 export const adminApi = {
@@ -45,7 +45,8 @@ export const adminApi = {
     customHeaderBtn: 'Config Header',
   },
   drawer2: {
-    title: 'Custom Header',
+    title:
+      'Config Header（⚠️Headers can be overwrite, empty value means the header will be IGNORED⚠️）',
     key: 'Key',
     value: 'Value',
   },

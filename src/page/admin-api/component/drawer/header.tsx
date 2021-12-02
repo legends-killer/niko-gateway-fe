@@ -2,7 +2,7 @@
  * @Author: legends-killer
  * @Date: 2021-11-25 01:34:56
  * @LastEditors: legends-killer
- * @LastEditTime: 2021-11-25 19:33:39
+ * @LastEditTime: 2021-12-02 17:04:23
  * @Description:
  */
 import { Button, Drawer, Input } from '@arco-design/web-react'
@@ -54,7 +54,11 @@ export default function HeaderDrawer(props: IProps) {
     <>
       <Drawer
         className={style.drawer2}
-        title={t('page.adminApi.drawer2.title')}
+        title={
+          <div style={{ fontSize: '0.7rem' }}>
+            {t('page.adminApi.drawer2.title')}
+          </div>
+        }
         visible={visible}
         onOk={onOk}
         onCancel={onCancel}
